@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nqueens.GUIController">
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Number of Choromosomes : ">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="labelNoC" text="none" />
+            <Region prefHeight="17.0" prefWidth="185.0" HBox.hgrow="ALWAYS" />
+            <Label text="Generation : " />
+            <Label fx:id="labelNoG" layoutX="406.0" layoutY="10.0" text="0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin></Label>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="99.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textfC" layoutX="104.0" layoutY="28.0" promptText="No. of Chromosomes" />
+            <TextField fx:id="textfQ" layoutX="104.0" layoutY="52.0" promptText="No. of Queens" />
+            <Button fx:id="buttonSim" layoutX="265.0" layoutY="25.0" mnemonicParsing="false" onAction="#onButtonActionSimulate" prefHeight="53.0" prefWidth="69.0" text="Simulate" />
+            <Label fx:id="labelWarn" layoutX="104.0" layoutY="80.0" text=" " textFill="#f80101" />
+            <Label layoutX="24.0" layoutY="32.0" text="Chromosomes:" />
+            <Label layoutX="61.0" layoutY="56.0" text="Queens:" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.6421404682274248" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <Group>
+                     <children>
+                        <HBox fx:id="hbox" alignment="CENTER" prefHeight="335.0" prefWidth="442.0" />
+                     </children>
+                  </Group>
+               </content>
+            </ScrollPane>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Progress :" textFill="#bc2525" underline="true">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txaLog" prefHeight="401.0" prefWidth="213.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></TextArea>
+               </children>
+            </VBox>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
