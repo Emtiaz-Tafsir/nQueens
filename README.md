@@ -1,2 +1,4 @@
-# nQueens with genetic algo
- A java program with UI that solves nQueen problems using Genetic Algorithm
+# Description
+ A java program with UI that solves nQueen problems using Genetic Algorithm. The program utilizes JavaFX library to provide the user interface. The user will be prompted with two inputs- the number of chromosomes and the number of queens. The program generates first set of chromosomes using random numbers, calculates the value of each chromosome using an evaluation function. The evaluation function counts the number of conflicts and subracts that with the optimal value. The chromosomes with higher values undergoes crossover and mutation then the whole process repeats itself until it finds a cromosome with the optimal value. The program then populates the UI according to the solution and prints the simulation process.
+ 
+ Note: For 8 queens, the program takes 350 - 500 generations to reach an outcome. Hence, the time taken to project the solution is around 5-15 seconds depending on the machine. Therefore, please try to use 4-7 queens for testing. any number less than 4 will be inaccurate since no solutions exists for 1,2 or 3 queens configuration.
